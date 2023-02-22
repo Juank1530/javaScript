@@ -76,7 +76,7 @@ console.log(mayor)
 var mayor = !(age1 == age2)
 console.log(mayor)
 
-//Unarios, ++Increment --Decrease 
+//Unarios, ++Increment --Decrease
 
 console.log(age1++)
 console.log(age1--)
@@ -86,7 +86,7 @@ console.log(age1--)
 var module = age1 % age2
 console.log(module)
 
-age1 += age2 
+age1 += age2
 
 console.log(age1)
 
@@ -97,7 +97,7 @@ var isHeMarried = false
 if (isHeMarried == true) {
     console.log('He is Married')
 } else {
-    console.log('He is single')   
+    console.log('He is single')
 }
 
 age = 15
@@ -111,3 +111,68 @@ if (age < 12) {
 }else{
     console.log(myName + ' is a old man')
 }
+
+// Switch sentence
+
+var month = 1;
+
+switch (month) {
+    case 1:
+        console.log('January')
+        break;
+    case 2:
+        console.log('February')
+        break;
+    case 3:
+        console.log('March')
+        break;
+    case 4:
+        console.log('April')
+        break;
+    case 5:
+        console.log('May')
+        break;
+    default:
+        console.log('No found month')
+        break;
+}
+
+// For sentence or loop
+
+for (let index = 1; index <= 10; index++) {
+    console.log(index)
+}
+
+for (let index = 1; index <= 10; index+=2) {
+    console.log(index)
+}
+
+for (let index = 10; index >= 1; index--) {
+    console.log(index)
+}
+
+for (let index = 5; index <= 50; index+=5) {
+    console.log(index)
+}
+
+// For while, do while
+
+var i = 1;
+
+while (i <= 10) {
+    console.log(i)
+    i++
+}
+
+var i = 10;
+while (i >= 1) {
+    console.log(i)
+    i--
+}
+
+var i = 1
+
+do {
+    console.log(i)
+    i+=2
+} while (i<=10);
