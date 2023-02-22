@@ -60,3 +60,54 @@ console.log(currentYear * 5);
 console.log('')
 console.log(currentYear / 2);
 
+//Logic operator
+
+//Logic <> <= >= ==
+
+var mayor = age1 > age2
+console.log(mayor)
+
+var mayor = age1 < age2
+console.log(mayor)
+
+var mayor = age1 == age2
+console.log(mayor)
+
+var mayor = !(age1 == age2)
+console.log(mayor)
+
+//Unarios, ++Increment --Decrease 
+
+console.log(age1++)
+console.log(age1--)
+
+//allocation += -= *=/= %=
+
+var module = age1 % age2
+console.log(module)
+
+age1 += age2 
+
+console.log(age1)
+
+//if else
+
+var isHeMarried = false
+
+if (isHeMarried == true) {
+    console.log('He is Married')
+} else {
+    console.log('He is single')   
+}
+
+age = 15
+console.log(age)
+if (age < 12) {
+    console.log(myName + ' is a child')
+} else if((age >11) && (age < 18 )){
+    console.log(myName + ' is a teenager')
+}else if((age >17) && (age < 60 )){
+    console.log(myName + ' is an adult')
+}else{
+    console.log(myName + ' is a old man')
+}
