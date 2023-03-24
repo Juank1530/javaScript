@@ -5,45 +5,75 @@ const equalButton = document.getElementsByName('data-equal')[0];
 var result = document.getElementById('result');
 var currentOpe = '';
 var previousOpe = '';
-var Operation = undefined;
+var operation = undefined;
 
 
 numberButton.forEach(function(button){
     button.addEventListener('click' ,function(){
         addNumber(button.innerText);
+        //alert(button.innerText);
     })
-})
+});
 
 operationButton.forEach(function(button){
     button.addEventListener('click' ,function(){
         selectOperation(button.innerText);
+        //alert(button.innerText);
     })
-})
+});
 
 equalButton.addEventListener('click', function(){
     calculate();
     refreshDisplay();
-})
+});
 
 deleteButton.addEventListener('click', function(){
-    clearInterval();
+    clear();
     refreshDisplay();
-})
+});
 
 
 /**********Functions**********/
 
-function OperationSelect(op){
+function selectOperation(op){
     if( currentOpe === '') return;
-    if (condition != ''){
+    if (previousOpe !== ''){
         calculate();
     }
-    Operation = op.toString();
+    operation = op.toString();
     previousOpe = currentOpe;
     currentOpe = '';
 }
 
 function calculate(){
+    var cal;
+    const last = parseFloat(previousOpe);
+    const current = parseFloat(currentOpe);
+    if (isNaN(last) || isNaN(current)) return;
+    switch (operation) {
+        case '+':
+            cal = last + current;
+            break;
+        case '-':
+            cal = last - current;
+            break;
+        case '*':
+            cal = last * current;
+            break;
+        case '/':
+            if(current == 0){
+                alert("You can't divide on 0");
+                clear();
+            }else{
+                cal = last / current;
+            }
+            break;
+        default:
+            return;
+    }
+    currentOpe = cal;
+    operation = undefined;
+    previousOpe = '';
 }
 
 function addNumber(num){
@@ -58,7 +88,7 @@ function refreshDisplay(){
 function clear(){
     currentOpe = '';
     previousOpe = '';
-    Operation = undefined;
+    operation = undefined;
 }
 
 clear();
