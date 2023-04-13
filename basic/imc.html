@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <script>
+
+        function write(phrase){
+            document.write(phrase+"<br>");
+        }
+
+        function calculateIMC(name,weight,height){
+
+            imc = weight/(Math.pow(height,2));
+            document.write(name+ "'s ICM is: " + imc);
+            jumpLine();
+        }
+/*
+        calculateIMC("Juank",82,1.68);
+        calculateIMC("Monik",75,1.51);
+
+        function calculateIMC2(weight,height){
+            return (weight/(Math.pow(height,2)));
+        }
+        write("IMC's average between Juan and Monica is: " + (calculateIMC2(80,1.85) + calculateIMC2(70,1.68))/2);*/
+
+        function calculateIMC3(weight,height,name){
+            return (weight/(Math.pow(height,2)));
+        }
+
+        name = prompt("Please enter your name: ");
+        weight = parseFloat(prompt("Please enter your weight: "));
+        height = parseFloat(prompt("Please enter your height: "));
+        imc = calculateIMC3(weight,height,name);
+
+        write(imc);
+
+        write("Hello " + name + " your ICM calculated is: " + imc);
+
+        if (imc < 18) {
+            write("Low weight :(");
+        } else if(imc > 18.5 && imc <= 24.9){
+            write("Normal weight :)");
+        }else if(imc == 25){
+            write("Overweight :(");
+        }else if(imc > 25 && imc <= 29.9){
+            write("Obesity :(");
+        }else if(imc == 30){
+            write("Pre-obesity :(");
+        }else if(imc > 30 && imc <= 34.9){
+            write("Obesity Grade I :(");
+        }else if(imc >= 35 && imc <= 39.9){
+            write("Obesity Grade II :(");
+        }else if(imc >= 40){
+            write("Obesity Grade III :(");
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

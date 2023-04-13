@@ -19,9 +19,30 @@
 
         document.write("If you use Gas in a tank with "+ tank + " liters of capacity, your car's performance is: " + gasPerformance + " kilometers per gas liter.<br>");
         document.write("If you use Alcohol in a tank with "+ tank + " liters of capacity, your car's performance is: " + alcoholPerformance + " kilometers per alcohol liter.<br>");
+
+        var myAge= 37;
+        var youAge=50;
+
+        function jumpLine(){
+            document.write("<br>");
+        }
+
+        jumpLine();
+
+        document.write("<h3>Our Ages</h3>")
+
+        function showDifferences(myAge,youAge){
+            var difference = myAge-youAge;
+            document.write("My age is " + myAge);
+            jumpLine();
+            document.write("Your age is "+ youAge);
+            jumpLine();
+            document.write("Between you and me there are "+ difference +" year of difference ");
+        }
+
+        showDifferences(myAge,youAge);
+
+
     </script>
 </body>
 </html>
-
-
-

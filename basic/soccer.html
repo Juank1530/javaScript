@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer</title>
+</head>
+
+<body>
+
+    <script>
+
+        function write(phrase) {
+            document.write(phrase + "<br>");
+        }
+
+        var wins = parseInt(prompt("Please enter the number of matches wins: "));
+        var draws = parseInt(prompt("Please enter the number of matches draws: "));
+        var total = (wins * 3) + draws
+
+        write("Total team points are " + total +" points.")
+
+        if (total > 28) {
+            write("The team is better than the last year, it has: "+ total+" points.");
+        }if (total < 18) {
+            write("The team is worse than the last year, it has: "+ total+" points.");
+        }if (total == 18) {
+            write("The team is same that the last year, it has: "+ total+" points.");
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
