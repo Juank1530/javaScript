@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Alcohol or Gas?</title>
+</head>
+<body>
+    <h3>¿Alcohol or Gas?</h3>
+    <script>
+
+        var tank = 40;
+        var gasKilometers = 480;
+        var alcoholKilometers = 300;
+        var gasPerformance = Math.round(gasKilometers/tank);
+        var alcoholPerformance1 = alcoholKilometers/tank;
+        var alcoholPerformance = Math.round(alcoholKilometers/tank);
+
+        document.write("If you use Gas in a tank with "+ tank + " liters of capacity, your car's performance is: " + gasPerformance + " kilometers per gas liter.<br>");
+        document.write("If you use Alcohol in a tank with "+ tank + " liters of capacity, your car's performance is: " + alcoholPerformance + " kilometers per alcohol liter.<br>");
+    </script>
+</body>
+</html>
+
+
+
