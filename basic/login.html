@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <script>
+
+       /* var userRegister = "alura";
+        var passwordRegister = "alura321";
+        var loginAttempts = 1;
+        var user = prompt("Enter your user: ");
+        var password = prompt("Enter your password");
+
+        if( userRegister != user || passwordRegister != password ) {
+            var user = prompt("Enter your user: ");
+            var password = prompt("Enter your password");
+            while (userRegister != user || passwordRegister != password || loginAttempts <= 3) {
+            alert("Wrong login, try again.");
+            loginAttempts++;
+        }
+        }else{
+            alert("Welcome to the system " + user);
+        }*/
+
+
+
+        var userRegister = "alura";
+        var passwordRegister = "alura321";
+
+        var max = 3;
+        var current = 1;
+
+        while(current <= max){
+            var user = prompt("Enter your user: ");
+            var password = prompt("Enter your password");
+
+            if(userRegister == user && passwordRegister == password){
+                alert("Bienvenido al sistema" + user);
+                current = max; // Here the loop is broken
+            } else {
+                if (intentoActual == 3) {
+                    alert("Agotaste el número permitido de intentos!");
+                } else {
+                    alert("Inicio de sesión inválido. Favor intente de nuevo");
+                }
+            }
+
+        // vaya al próximo intento 
+            intentoActual++;
+        }
+
+
+    </script>
+
+    
+
+
+
+
+</body>
+</html>

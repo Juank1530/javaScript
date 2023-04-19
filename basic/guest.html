@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest</title>
+</head>
+<body>
+    <script>
+
+        function jumpLine() {
+            document.write("<br>");
+        }
+
+        function print(phrase) {
+            document.write(phrase);
+            jumpLine();
+        }
+
+        function lottery(n){
+            return Math.round((Math.random()*n));
+        }
+
+        var number = parseInt(prompt("Please enter a number"));
+        var lotteryNumber = lottery(number);
+
+
+        if ( lotteryNumber == number) {
+            print("Got it right!!!");
+        } else {
+            if(number > lotteryNumber){
+                print("yor number was greater than "+ lotteryNumber);
+            }else{
+                print("your number was smaller than "+ lotteryNumber);
+            }
+        }
+
+    </script>
+</body>
+</html>

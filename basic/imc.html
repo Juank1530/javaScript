@@ -32,11 +32,11 @@
             return (weight/(Math.pow(height,2)));
         }
 
+
         name = prompt("Please enter your name: ");
         weight = parseFloat(prompt("Please enter your weight: "));
         height = parseFloat(prompt("Please enter your height: "));
         imc = calculateIMC3(weight,height,name);
-
         write(imc);
 
         write("Hello " + name + " your ICM calculated is: " + imc);
@@ -58,7 +58,6 @@
         }else if(imc >= 40){
             write("Obesity Grade III :(");
         }
-
 
 
 
