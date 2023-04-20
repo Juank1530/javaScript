@@ -42,21 +42,17 @@
                 alert("Bienvenido al sistema" + user);
                 current = max; // Here the loop is broken
             } else {
-                if (intentoActual == 3) {
+                if (current == 3) {
                     alert("Agotaste el número permitido de intentos!");
                 } else {
                     alert("Inicio de sesión inválido. Favor intente de nuevo");
                 }
             }
 
-        // vaya al próximo intento 
-            intentoActual++;
+        // vaya al próximo intento
+            current++;
         }
-
-
     </script>
-
-    
 
 
 
