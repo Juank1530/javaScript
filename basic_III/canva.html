@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Canvas</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        var display = document.querySelector("canvas");
+        var pencil = display.getContext("2d");
+
+        pencil.fillStyle = "lightgrey"; // Property
+        pencil.fillRect(0,0,600,400); //Function, fillRect(x, y, weight ,height) it is to draw a rectangle
+
+        pencil.fillStyle = "green"; // Property
+        pencil.fillRect(0,0,200,400); //Function
+        /*
+        pencil.fillStyle = "white"; // Property
+        pencil.fillRect(200,0,200,400); //Function
+        */
+        pencil.fillStyle = "red"; // Property
+        pencil.fillRect(400,0,200,400); //Function
+
+        pencil.fillStyle = "yellow";
+        pencil.beginPath();
+        pencil.moveTo(300,200); // Move to center in the canvas
+        pencil.lineTo(200,400);
+        pencil.lineTo(400,400); // Move to
+        pencil.fill();
+
+        pencil.fillStyle = "blue";
+        pencil.beginPath();
+        pencil.arc(300,200,50,0,2*3.14);
+        pencil.fill();
+
+        
+
+    </script>
+
+</body>
+</html>
