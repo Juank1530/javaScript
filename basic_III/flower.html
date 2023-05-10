@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+</head>
+<body>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var display = document.querySelector("canvas");
+    var pencil = display.getContext("2d");
+    pencil.fillStyle = "lightgray";
+    pencil.fillRect(0, 0, 600, 400);
+
+    
+
+    function drawCircle(x,y,radio,color){
+        pencil.fillStyle = color;
+        pencil.beginPath();
+        pencil.arc(x,y,radio,0,2*3.14);
+        pencil.fill();
+    }
+
+    function drawFlower(x,y){
+        drawCircle(x,y,10,"yellow");
+        drawCircle(x,y+20,10,"blue");
+        drawCircle(x,y-20,10,"blue");
+        drawCircle(x+20,y,10,"blue");
+        drawCircle(x-20,y,10,"blue");
+    }
+
+    function drawFlower2(x,y,r){
+        drawCircle(x,y,r,"yellow");
+        drawCircle(x,y+(r*2),r,"blue");
+        drawCircle(x,y-(r*2),r,"blue");
+        drawCircle(x+(r*2),y,r,"blue");
+        drawCircle(x-(r*2),y,r,"blue");
+    }
+
+
+    drawFlower2(100,100,30);
+
+    /*
+    //Loops
+    var i = 0;
+    while (i < 600) {
+        drawSquared(i,0,"blue");
+        drawSquared(i,50,"blue");
+        drawSquared(i,100,"blue");
+        drawSquared(i,150,"blue");
+        i= i+ 50;
+    }
+
+    for (let i = 0; i < 600; i = i+50) {
+        drawSquared(0,i,"red");
+        drawSquared(50,i,"red");
+        drawSquared(100,i,"red");
+        drawSquared(150,i,"red");
+    }
+    */
+
+</script>
+
+</body>
+</html>
